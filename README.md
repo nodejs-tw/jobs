@@ -1,4 +1,4 @@
-Node.js jobs borad
+Node.js jobs board
 ====
 
 Our jobs board.
