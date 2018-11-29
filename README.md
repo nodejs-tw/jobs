@@ -1,6 +1,10 @@
 Node.js jobs board
 ====
 
+```
+根據 就業服務法 第5條第2項第6點，提供職缺之經常性薪資未達新臺幣四萬元，應公開揭示或告知其薪資範圍。
+```
+
 Our jobs board.
 
 Please create new issue in [issues tab](https://github.com/nodejs-tw/jobs/issues).
