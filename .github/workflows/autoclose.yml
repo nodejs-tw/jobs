@@ -12,7 +12,7 @@ jobs:
     - name: Set long time ago date as env variable
       run: echo "::set-env name=LONG_TIME::$(date -d "365 days ago" +"%Y-%m-%d")"
     - name: Set query as env variable
-      run: echo "::set-env name=QUERY::'created:<$LONG_TIME state:open'"
+      run: echo "::set-env name=QUERY::created:<$LONG_TIME state:open"
 
     - uses: lee-dohm/close-matching-issues@v2
       with:
