@@ -1,9 +1,8 @@
 name: Auto Close Outdated Issues
 
-on: [push]
-# on:
-#   schedule:
-#     - cron:  '*/15 * * * *'
+on:
+  schedule:
+    - cron:  '0 0 1 * *'
 
 jobs:
   auto-close:
