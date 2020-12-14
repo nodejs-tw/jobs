@@ -15,6 +15,7 @@ jobs:
         with:
           access_token: ${{ secrets.LINE_ACCESS_TOKEN }}
           message: |
+            .
             新職缺通知：
             【 ${{ github.event.issue.title }} 】
 
