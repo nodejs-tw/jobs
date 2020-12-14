@@ -10,9 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     name: LINE push message
     steps:
-    - name: Push LINE message
-      uses: ufoo68/line-push-message@v1.3
-      with:
-        user-id: ${{ secrets.USER_ID }}
-        message: '新職缺通知【 ${{ github.event.issue.title }} 】 詳細資訊請參考: ${{ github.event.issue.html_url }}'
-        channel-access-token: ${{ secrets.CHANNEL_ACCESS_TOKEN }}
+      - name: Push LINE Notify
+        uses: snow-actions/line-notify@v1.0.0
+        with:
+          access_token: ${{ secrets.LINE_ACCESS_TOKEN }}
+          message: |
+            新職缺通知：
+            【 ${{ github.event.issue.title }} 】
+
+            詳細資訊請參考: ${{ github.event.issue.html_url }}
