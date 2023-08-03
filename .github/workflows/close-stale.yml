@@ -1,0 +1,29 @@
+name: Close stale issues
+
+on:
+  schedule:
+    - cron: "0 8 * * *"
+  workflow_dispatch:
+#     inputs:
+#       name:
+#         description: 'Person to greet'
+#         required: true
+#         default: 'Mona the Octocat'
+#       home:
+#         description: 'location'
+#         required: false
+#         default: 'The Octoverse'
+
+jobs:
+  auto-close:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Close stale issues
+      uses: actions/stale@v3
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        days-before-stale: 180
+        days-before-close: 180
+        stale-issue-message: 'This issue is stale because it has been open 180 days with no activity. This issue will be automatically closed.'
